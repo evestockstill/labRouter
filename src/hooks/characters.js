@@ -17,11 +17,23 @@ export const useCharacters = () => {
     const foundCharacter = characters.find(character => character.id === id);
     setCurrCharacter(foundCharacter);
   };
+  const [detail, setDetail] = useState('');
+  useEffect(() => {
+    handleCurrCharacter();
+  }, []);
 
+  const handleCurrCharacter = () => {
+    getCharacters(detail).then(characters => setCharacters(characters));
+  };
+  const handleDetailChange = detail => {
+    setDetail(detail);
+  };
   getCharacterData();
 
   return {
     characters,
+    handleCurrCharacter,
+    handleDetailChange,
     character: currCharacter,
     setCharacter: setCharacterFromID
   };

@@ -8,9 +8,6 @@ const Details = (props) => {
 
   const character = characters.find(character => character.id === id);
 
-  console.log(characters);
-  console.log(JSON.stringify(character));
-
   return (
     <section className={styles.details}>
       <h2>Details Page</h2>
