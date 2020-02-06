@@ -3,20 +3,18 @@ import Nav from './nav/Nav';
 import Footer from './footer/Footer';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './home/Home';
+// import Home from './home/Home';
 import Details from './details/Details';
-import DisplayCharacters from './DisplayCharacters'
+import Characters from './character/Characters';
 
 export default function App() {
-
   return (
     <Router>
       <Nav />
-      <DisplayCharacters
-      {/* <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/details/:name' component={Details} />
-      </Switch> */}
+      <Switch>
+        <Route exact path='/' component={Characters} />
+        <Route path='/details/:id' component={Details} />
+      </Switch>
       <Footer />
     </Router>
   );

@@ -1,10 +1,21 @@
 import React from 'react';
 import styles from './Details.css';
+import { useCharacters } from '../../hooks/characters';
 
-const Details = () => {
-  <section className={styles.details}>
-    <h2>Details Page</h2>
-  </section>;
+const Details = (props) => {
+  const id = props.match.params.id;
+  const { characters } = useCharacters();
+
+  const character = characters.find(character => character.id === id);
+
+  console.log(characters);
+  console.log(JSON.stringify(character));
+
+  return (
+    <section className={styles.details}>
+      <h2>Details Page</h2>
+      {}
+    </section>
+  );
 };
 export default Details;
-

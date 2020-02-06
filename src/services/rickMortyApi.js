@@ -1,15 +1,28 @@
 // const randomNum = Math.floor(Math.random() * 493) + 1;
 
+/*
+  {
+    info: {
+      count: "{totalCount}",
+      pages: "{numberPages}",
+      next: "{https://....}"
+    },
+    results: [
+      {
+        name: "{characterName}"
+      }
+    ]
+  }
+*/
+
 export const getCharacters = () => {
-  fetch('https://rickandmortyapi.com/api/character/')
-    .then(res => res.json)
-    .then(([{ name, image }]) => ({
-      name: name,
-      img: image
-    }));
+  return fetch('https://rickandmortyapi.com/api/character/')
+    .then(res => res.json())
+    .then(({ results }) => results);
 };
 
-export const getCharactersInfo = () => {
-  fetch('https://rickandmortyapi.com/api/character/')
-    .then(res => res.json);
-};
+// export const getCharactersInfo = () => {
+//   return fetch('https://rickandmortyapi.com/api/character/').then(
+//     res => res.json
+//   );
+// };

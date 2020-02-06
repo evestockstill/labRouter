@@ -15,10 +15,13 @@ Add paging to your list page.
 Header
 Create a header that allows a user to navigate back to the home page.
 
+<!-- /details/:characterId -->
+
 Testing
 Snapshot testing
 Test state changes
 Mock services
+
 Rubric
 Router setup 2 pts
 List Page: 3 pts
