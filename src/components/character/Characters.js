@@ -12,7 +12,7 @@ const Characters = () => {
   //   <ul>
   //     {characters.map(character => (
   //       <li key={character.name}>
-  //         <Link to={'/details/' + character.id}>
+  //         <Link to={`/details/${character.id}`}>
   //           <Character character={character} />
   //         </Link>
   //       </li>
