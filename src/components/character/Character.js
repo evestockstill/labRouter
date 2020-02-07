@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Character.css';
 
-const Character = ({ character }) => {
-  const { image, name } = character;
+const Character = ({ image, name }) => {
+ 
   return (
     <section className={styles.container}>
       <figure>
@@ -15,10 +15,8 @@ const Character = ({ character }) => {
 };
 
 Character.propTypes = {
-  character: PropTypes.objectOf({
-    image: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired
-  })
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
 };
 
 export default Character;

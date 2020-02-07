@@ -5,17 +5,21 @@ export const useCharacters = () => {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    getCharacters().then(setCharacters);
-  });
+    getCharacters()
+      .then(setCharacters);
+  }, []);
+
   return characters;
 };
 
-export const useCharacter = id => {
+export const useCharacter = (id) => {
   const [character, setCharacter] = useState({
     episode: []
   });
+
   useEffect(() => {
-    getCharacter(id).then(setCharacter);
+    getCharacter(id)
+      .then(setCharacter);
   });
 
   return character;
