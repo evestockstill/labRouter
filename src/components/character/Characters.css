@@ -3,7 +3,7 @@
     display: grid;
     grid-template-rows: repeat(3, 1fr);
 
-    li {
+    .List{
          display: grid;
     grid-template-rows: repeat(3, 1fr);
     }

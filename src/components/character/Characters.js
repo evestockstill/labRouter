@@ -8,17 +8,12 @@ const Characters = () => {
   const characters = useCharacters();
 
   const characterElements = characters.map(character => (
-    <li key={character.id}>
+    <li key={character.id} >
       <Link to={`/character/${character.id}`}>
-        <Character name={character.name} image={character.image}/>
+        <Character name={character.name} image={character.image} />
       </Link>
     </li>
-  
   ));
-  return (
-    <ul className={styles.list}>
-      {characterElements}
-    </ul>
-  );
+  return <ul className={styles.list}>{characterElements}</ul>;
 };
 export default Characters;

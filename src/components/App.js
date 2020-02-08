@@ -13,6 +13,7 @@ export default function App() {
       <Switch>
         <Route exact path='/' component={Characters} />
         <Route path='/character/:id' component={Details} />
+        <Route path='/home' component={Characters} />
       </Switch>
       <Footer />
     </Router>
