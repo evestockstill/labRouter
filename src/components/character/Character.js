@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Character.css';
 
 const Character = ({ image, name }) => {
- 
+  
   return (
     <section className={styles.container}>
       <figure>

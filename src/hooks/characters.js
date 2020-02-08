@@ -20,7 +20,7 @@ export const useCharacter = (id) => {
   useEffect(() => {
     getCharacter(id)
       .then(setCharacter);
-  });
+  }, [id]);
 
   return character;
 };

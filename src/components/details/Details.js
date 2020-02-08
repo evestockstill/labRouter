@@ -15,7 +15,6 @@ const Details = ({ match }) => {
       <h1>{character.name}</h1>
       <img src={character.image} />
       <p>{character.status}</p>
-      <p>{character.origin}</p>
       <ul>
         {episodeLinks}
       </ul>
